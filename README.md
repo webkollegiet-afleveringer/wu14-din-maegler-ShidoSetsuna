@@ -115,3 +115,6 @@ I denne formular er der mulighed for at oprette en bruger.
 
 ### Hov! (404 / Fejlside)
 Denne side kan du bruge som fallback i forbindelse med fejlhåndtering mv., hvis du har brug for det. Footeren skal selvfølgelig være den samme som på de andre sider.
+
+### API
+`https://dinmaegler.onrender.com/`
