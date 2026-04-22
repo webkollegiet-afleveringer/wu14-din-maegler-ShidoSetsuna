@@ -1,5 +1,6 @@
 import { PageHero } from "./_components/PageHero";
 import { SearchCard } from "./_components/SearchCard";
+import { AboutSection } from "./_components/AboutSection";
 
 export default function HomePage() {
   return (
@@ -11,6 +12,7 @@ export default function HomePage() {
       >
         <SearchCard />
       </PageHero>
+      <AboutSection />
     </main>
   );
 }
