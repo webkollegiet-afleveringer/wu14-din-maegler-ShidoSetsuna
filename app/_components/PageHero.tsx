@@ -10,7 +10,7 @@ type Props = {
 };
 
 const sizeClasses: Record<Size, string> = {
-  lg: "min-h-[420px] py-16",
+  lg: "min-h-[500px] py-16",
   md: "min-h-[310px] py-12",
   sm: "min-h-[100px] py-6",
 };
