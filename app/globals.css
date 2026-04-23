@@ -3,14 +3,20 @@
 :root {
   --background: #ffffff;
   --foreground: #162A41;
+  --background-1: #F8F8FB;
+  --font-roboto: "Roboto", sans-serif;
+  --para-1: #333333;
+  --heading: #2A2C30;
+  --shape-1: #EEF7FF;
 }
 
-@theme inline {
+@theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-para-1: #333333;
-  --color-heading: #2A2C30;
-  --color-shape-1: #EEF7FF;
+  --color-background-1: var(--background-1);
+  --color-para-1: var(--para-1);
+  --color-heading: var(--heading);
+  --color-shape-1: var(--shape-1);
   --font-sans: var(--font-roboto);
 }
 
