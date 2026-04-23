@@ -1,4 +1,4 @@
-const API_BASE = "https://dinmaegler.onrender.com";
+export const API_BASE = "https://dinmaegler.onrender.com";
 
 
 // A home listing. Only the fields we actually use are typed here

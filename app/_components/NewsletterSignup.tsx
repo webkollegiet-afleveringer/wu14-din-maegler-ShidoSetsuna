@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
+import { NewsletterForm } from "./NewsletterForm";
 
 export function NewsletterSignup() {
   const headingId = "newsletter-heading";
@@ -33,29 +33,7 @@ export function NewsletterSignup() {
           hold dig opdateret på boligmarkedet
         </h2>
 
-        {/* Form shell - submit wired up in a follow-up step */}
-        <form className="w-full md:max-w-md">
-          <label htmlFor="newsletter-email" className="sr-only">
-            Email adresse
-          </label>
-          <div className="flex items-center bg-white">
-            <input
-              id="newsletter-email"
-              type="email"
-              name="email"
-              required
-              placeholder="Indtast din email adresse"
-              className="flex-1 min-w-0 px-4 py-3 text-heading text-sm placeholder:text-gray-400"
-            />
-            <button
-              type="submit"
-              aria-label="Tilmeld"
-              className="px-4 py-3 text-heading"
-            >
-              <ArrowRight aria-hidden="true" size={20} />
-            </button>
-          </div>
-        </form>
+        <NewsletterForm />
       </div>
     </section>
   );
