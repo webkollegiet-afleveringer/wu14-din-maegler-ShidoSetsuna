@@ -17,20 +17,46 @@ export type Home = {
   images: { url: string }[];
 };
 
-/**
- * Build a URL-safe slug from a home's address + city, e.g.
- * "Haraldsborgvej 143 " + "Roskilde" → "haraldsborgvej-143-roskilde"
- *
- * Used for both generating card links and looking up homes on the
- * detail page
- */
-export function slugifyHome(home: Pick<Home, "adress1" | "city">): string {
-  return `${home.adress1}-${home.city}`
+/** Common slug helper — lowercased, accent-stripped, dashed. */
+function slug(input: string): string {
+  return input
     .toLowerCase()
     .normalize("NFD")                       // split accented chars
     .replace(/[\u0300-\u036f]/g, "")        // strip the accents
     .replace(/[^a-z0-9]+/g, "-")            // non-alnum → dash
     .replace(/^-|-$/g, "");                 // trim leading/trailing dashes
+}
+
+/**
+ * Build a URL-safe slug from a home's address + city, e.g.
+ * "Haraldsborgvej 143 " + "Roskilde" → "haraldsborgvej-143-roskilde"
+ *
+ * Used for both generating card links and looking up homes on the
+ * detail page — single source of truth.
+ */
+export function slugifyHome(home: Pick<Home, "adress1" | "city">): string {
+  return slug(`${home.adress1}-${home.city}`);
+}
+
+/**
+ * An agent (real estate broker).
+ */
+export type Agent = {
+  id: string;
+  name: string;
+  title: string;
+  phone: string;
+  email: string;
+  image: { url: string };
+  description: string;
+};
+
+/**
+ * Build a URL-safe slug from an agent's name, e.g.
+ * "Peter Sørensen" → "peter-sorensen".
+ */
+export function slugifyAgent(agent: Pick<Agent, "name">): string {
+  return slug(agent.name);
 }
 
 /**
@@ -61,6 +87,22 @@ export async function getFeaturedHomes(limit = 4): Promise<Home[]> {
     });
     if (!res.ok) return [];
     return (await res.json()) as Home[];
+  } catch {
+    return [];
+  }
+}
+
+/**
+ * Fetch a limited list of agents for the home page. Returns [] on
+ * failure so callers can render a graceful empty state.
+ */
+export async function getFeaturedAgents(limit = 3): Promise<Agent[]> {
+  try {
+    const res = await fetch(`${API_BASE}/agents?_limit=${limit}`, {
+      next: { revalidate: 60 },
+    });
+    if (!res.ok) return [];
+    return (await res.json()) as Agent[];
   } catch {
     return [];
   }

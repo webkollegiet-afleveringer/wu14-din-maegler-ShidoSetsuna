@@ -8,6 +8,7 @@
   --para-1: #333333;
   --heading: #2A2C30;
   --shape-1: #EEF7FF;
+  --card-shadow: #0073E10D;
 }
 
 @theme {
@@ -17,6 +18,7 @@
   --color-para-1: var(--para-1);
   --color-heading: var(--heading);
   --color-shape-1: var(--shape-1);
+  --color-card-shadow: var(--card-shadow);
   --font-sans: var(--font-roboto);
 }
 

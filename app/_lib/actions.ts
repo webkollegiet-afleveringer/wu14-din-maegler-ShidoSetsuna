@@ -11,8 +11,7 @@ export type SubscribeState =
  * Server action: sign a user up for the newsletter.
  *
  * Returns a discriminated union so the client can render the right
- * message. Never throws to the client - every failure path returns
- * an error state with a Danish user-facing message.
+ * message.
  */
 export async function subscribeAction(
   _prev: SubscribeState,

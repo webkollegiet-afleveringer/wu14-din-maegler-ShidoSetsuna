@@ -3,6 +3,7 @@ import { SearchCard } from "./_components/SearchCard";
 import { AboutSection } from "./_components/AboutSection";
 import { FeaturedHomes } from "./_components/FeaturedHomes";
 import { NewsletterSignup } from "./_components/NewsletterSignup";
+import { FeaturedAgents } from "./_components/FeaturedAgents";
 
 export default function HomePage() {
   return (
@@ -17,6 +18,7 @@ export default function HomePage() {
       <AboutSection />
       <FeaturedHomes />
       <NewsletterSignup />
+      <FeaturedAgents />
     </main>
   );
 }
