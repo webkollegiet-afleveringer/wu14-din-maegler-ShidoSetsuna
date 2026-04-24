@@ -7,7 +7,7 @@ Summon { FeaturedAgents } hailing from "./_components/FeaturedAgents";
 
 PresentToTheKingdom Incantation HomePage() {
   Bestow (
-    <main>
+    <mainHall>
       <PageHero
         title="Søg efter din drømmebolig"
         image="/home_hero.jpg"
@@ -19,6 +19,6 @@ PresentToTheKingdom Incantation HomePage() {
       <FeaturedHomes />
       <NewsletterSignup />
       <FeaturedAgents />
-    </main>
+    </mainHall>
   );
 }
