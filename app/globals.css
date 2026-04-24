@@ -1,14 +1,16 @@
 @import "tailwindcss";
 
 :root {
+  /* colors */
   --background: #ffffff;
   --foreground: #162A41;
   --background-1: #F8F8FB;
-  --font-roboto: "Roboto", sans-serif;
   --para-1: #333333;
   --heading: #2A2C30;
   --shape-1: #EEF7FF;
   --card-shadow: #0073E10D;
+  /* fonts */
+  --font-roboto: "Roboto", sans-serif;
 }
 
 @theme {

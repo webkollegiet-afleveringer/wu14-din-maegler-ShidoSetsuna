@@ -15,7 +15,7 @@ export async function SearchCard() {
       action="/boliger"
       method="get"
       aria-labelledby={headingId}
-      className="bg-white text-heading w-full max-w-[680px] p-8 mt-8 text-left"
+      className="bg-white text-heading w-full max-w-170 p-8 mt-8 text-left"
     >
       <h2 id={headingId} className="font-bold text-sm">
         {heading}

@@ -41,7 +41,7 @@ export function PropertyCard({ home }: Props) {
         className="block group"
       >
         {imageUrl && (
-          <div className="relative aspect-[24/10] w-full overflow-hidden">
+          <div className="relative aspect-24/10 w-full overflow-hidden">
             <Image
               src={imageUrl}
               alt={`Billede af boligen ${home.adress1}`}

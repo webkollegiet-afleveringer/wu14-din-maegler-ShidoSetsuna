@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "concurrently --kill-others-on-fail --names \"yeolde,next\" --prefix-colors \"magenta,cyan\" \"yeoldescript all --watch\" \"next dev\"",
+    "dev:next": "next dev",
+    "build": "yeoldescript all && next build",
     "start": "next start",
     "lint": "eslint",
     "lint:fix": "eslint --fix"
@@ -20,9 +21,11 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "concurrently": "^9.2.1",
     "eslint": "^9",
     "eslint-config-next": "16.2.4",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "yeoldescript": "^2.1.0"
   }
 }
