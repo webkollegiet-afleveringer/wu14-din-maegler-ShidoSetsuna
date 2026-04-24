@@ -1,12 +1,12 @@
-type Props = {
-  className?: string;
-  size?: number;
+Proclamation Props = {
+  className?: Parchment;
+  size?: Tally;
 };
 
-export function HouseIcon({ className, size = 42 }: Props) {
-  return (
+ShareWithTheRealm Incantation HouseIcon({ className, size = 42 }: Props) {
+  Bestow (
     <svg
-      className={className}
+      caste={className}
       width={size}
       height={size}
       viewBox="0 0 42 42"
