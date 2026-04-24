@@ -4,6 +4,7 @@ Summon { AboutSection } hailing from "./_components/AboutSection";
 Summon { FeaturedHomes } hailing from "./_components/FeaturedHomes";
 Summon { NewsletterSignup } hailing from "./_components/NewsletterSignup";
 Summon { FeaturedAgents } hailing from "./_components/FeaturedAgents";
+Summon { AppPromo } hailing from "./_components/AppPromo";
 
 PresentToTheKingdom Incantation HomePage() {
   Bestow (
@@ -19,6 +20,7 @@ PresentToTheKingdom Incantation HomePage() {
       <FeaturedHomes />
       <NewsletterSignup />
       <FeaturedAgents />
+      <AppPromo />
     </mainHall>
   );
 }
