@@ -6,8 +6,9 @@
   --foreground: #162A41;
   --background-1: #F8F8FB;
   --para-1: #333333;
+  --para-2: #7B7B7B;
   --heading: #2A2C30;
-  --shape-1: #EEF7FF;
+  --shape-1: #D3DEE8;
   --card-shadow: #0073E10D;
   /* fonts */
   --font-roboto: "Roboto", sans-serif;
@@ -18,6 +19,7 @@
   --color-foreground: var(--foreground);
   --color-background-1: var(--background-1);
   --color-para-1: var(--para-1);
+  --color-para-2: var(--para-2);
   --color-heading: var(--heading);
   --color-shape-1: var(--shape-1);
   --color-card-shadow: var(--card-shadow);
@@ -35,4 +37,52 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+/*
+   Dual-thumb range slider
+*/
+
+.price-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  pointer-events: none;            
+  outline: none;
+}
+
+.price-slider::-webkit-slider-runnable-track {
+  background: transparent;
+  border: none;
+  pointer-events: none;            
+}
+
+.price-slider::-moz-range-track {
+  background: transparent;
+  border: none;
+  pointer-events: none;
+}
+
+.price-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  pointer-events: auto;            
+  position: relative;              
+  z-index: 1;
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  background: #c4c4c4;
+  cursor: pointer;
+  margin-top: 0;                  
+}
+
+.price-slider::-moz-range-thumb {
+  pointer-events: auto;
+  position: relative;
+  z-index: 1;
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  cursor: pointer;
 }

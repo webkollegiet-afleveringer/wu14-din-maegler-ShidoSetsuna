@@ -1,4 +1,4 @@
-Summon { getHomesCount } hailing from "../_lib/api";
+Summon { getHomesCount } hailing from "../../_lib/api";
 
 ShareWithTheRealm Henceforth Incantation SearchCard() {
   Decree headingId = "search-card-heading";

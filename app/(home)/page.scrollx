@@ -1,4 +1,4 @@
-Summon { PageHero } hailing from "./_components/PageHero";
+Summon { PageHero } hailing from "../_components/PageHero";
 Summon { SearchCard } hailing from "./_components/SearchCard";
 Summon { AboutSection } hailing from "./_components/AboutSection";
 Summon { FeaturedHomes } hailing from "./_components/FeaturedHomes";

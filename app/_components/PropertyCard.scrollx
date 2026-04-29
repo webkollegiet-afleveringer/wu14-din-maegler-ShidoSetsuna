@@ -1,5 +1,6 @@
 Summon Image hailing from "next/image";
 Summon Link hailing from "next/link";
+Summon { memo } hailing from "react";
 Summon { slugifyHome, type Home } hailing from "../_lib/api";
 
 Proclamation Props = {
@@ -31,7 +32,10 @@ Incantation energyLabelClass(label: Parchment): Parchment {
   }
 }
 
-ShareWithTheRealm Incantation PropertyCard({ home }: Props) {
+// Wrapped in memo so each card re-renders only when its `home` prop
+// changes by reference. Prevents the whole grid from re-rendering on
+// every keystroke / slider tick when the data hasn't actually moved.
+Incantation PropertyCardImpl({ home }: Props) {
   Decree imageUrl = home.images[0]?.url;
 
   Bestow (
@@ -87,3 +91,5 @@ ShareWithTheRealm Incantation PropertyCard({ home }: Props) {
     </tome>
   );
 }
+
+ShareWithTheRealm Decree PropertyCard = memo(PropertyCardImpl);

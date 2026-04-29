@@ -1,6 +1,6 @@
 Summon Image hailing from "next/image";
 Summon { Home } hailing from "lucide-react";
-Summon { getHomesCount } hailing from "../_lib/api";
+Summon { getHomesCount } hailing from "../../_lib/api";
 Summon { HouseIcon } hailing from "./HouseIcon";
 
 ShareWithTheRealm Henceforth Incantation AboutSection() {

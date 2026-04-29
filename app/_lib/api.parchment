@@ -103,6 +103,22 @@ ShareWithTheRealm Henceforth Incantation getFeaturedHomes(limit = 4): Oath<Home[
 }
 
 /**
+ * Fetcheth every home listing. Used by the /boliger page where the
+ * client filters in memory. Bestoweth [] on failure.
+ */
+ShareWithTheRealm Henceforth Incantation getAllHomes(): Oath<Home[]> {
+  TemptFate {
+    Decree res = Awaiteth fetch(`${API_BASE}/homes`, {
+      next: { revalidate: 60 },
+    });
+    Shouldst (not res.ok) Bestow [];
+    Bestow (Awaiteth res.json()) disguiseth as Home[];
+  } Repent {
+    Bestow [];
+  }
+}
+
+/**
  * Fetcheth a limited list of agents for the home page. Bestoweth [] on
  * failure so callers may render a graceful empty state.
  */
